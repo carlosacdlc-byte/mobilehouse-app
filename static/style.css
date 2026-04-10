@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('/static/fondo.jpg') no-repeat center center/cover;
+}
+
+/* CAPA CLARA */
+.overlay {
+    background: rgba(255,255,255,0.6); /* MÁS CLARO */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;   /* 🔥 CLAVE */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    padding: 12px;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #00ffd5;
+}
+
+/* CONTENIDO */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* IZQUIERDA */
+.left {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    width: 400px;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.left h1 {
+    color: #00ffd5;
+}
+
+/* SERVICIOS */
+.servicios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicios li {
+    margin: 10px 0;
+}
+
+/* DERECHA */
+.right {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* FORM */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #00ffd5, #00c9a7);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto; /* 🔥 CAMBIO CLAVE */
+}
+button:hover {
+    opacity: 0.9;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+select {
+    padding: 10px;
+    border-radius: 6px;
+}
+button[type="button"] {
+    margin-top: 10px;
+}
+form {
+    text-align: center;
+}
+
+form input,
+form select {
+    text-align: left;
+}
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+body {
+    padding-top: 70px;
+}
+.navbar {
+    backdrop-filter: blur(10px);
+}
