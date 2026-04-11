@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Consulta tu servicio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- 🔝 NAVBAR -->
+<div class="navbar">
+<a href="/">🏠 Inicio</a>
+<a href="/consulta">🔍 Consultar</a>
+<a href="/admin">📊 Panel</a>
+</div>
+
+<!-- 🌌 CONTENIDO -->
+<div class="overlay">
+<div class="main">
+
+<div class="right">
+<h2>Consulta tu servicio</h2>
+
+<!-- 📲 FORMULARIO -->
+<form method="post">
+
+<div style="display:flex; gap:10px; margin-bottom:10px;">
+
+<select name="codigo_pais" required style="width: 30%;">
+<option value="+57">🇨🇴 +57</option>
+<option value="+1">🇺🇸 +1</option>
+<option value="+34">🇪🇸 +34</option>
+<option value="+51">🇵🇪 +51</option>
+<option value="+52">🇲🇽 +52</option>
+</select>
+
+<input type="text" name="telefono" placeholder="Número" required style="width: 70%;">
+
+</div>
+
+<button type="submit">Consultar</button>
+
+</form>
+
+<!-- 📊 RESULTADOS -->
+{% if resultados %}
+
+<hr>
+
+{% for r in resultados %}
+<div style="background:#ffffff; margin-top:15px; padding:15px; border-radius:10px; color:black;">
+
+<p><strong>ID:</strong> {{ r[0] }}</p>
+<p><strong>Equipo:</strong> {{ r[5] }}</p>
+<p><strong>Problema:</strong> {{ r[6] }}</p>
+<p><strong>Estado:</strong> {{ r[7] }}</p>
+
+</div>
+{% endfor %}
+
+{% endif %}
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
